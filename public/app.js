@@ -1,5 +1,5 @@
 const $=s=>document.querySelector(s);
-const state={messages:[],settings:{apiUrl:localStorage.apiUrl||"http://127.0.0.1:3000",model:localStorage.model||"kavandad-llm",temperature:Number(localStorage.temperature??0.7),maxTokens:Number(localStorage.maxTokens??256),systemPrompt:localStorage.systemPrompt||"You are a helpful local AI assistant."}};
+const state={messages:[],settings:{apiUrl:localStorage.apiUrl||window.location.origin,model:localStorage.model||"kavandad-llm",temperature:Number(localStorage.temperature??0.7),maxTokens:Number(localStorage.maxTokens??256),systemPrompt:localStorage.systemPrompt||"You are a helpful local AI assistant."}};
 
 $("#apiUrl").value=state.settings.apiUrl;$("#model").value=state.settings.model;$("#temperature").value=state.settings.temperature;$("#tempOut").value=state.settings.temperature.toFixed(2);$("#maxTokens").value=state.settings.maxTokens;$("#systemPrompt").value=state.settings.systemPrompt;
 
