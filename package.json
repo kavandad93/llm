@@ -1,18 +1,13 @@
 {
-  "name": "kavandad-llm",
-  "version": "0.1.0",
+  "name": "kadad-ai",
+  "version": "1.0.0",
   "private": true,
-  "description": "Local LLM API and web control panel",
-  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }
